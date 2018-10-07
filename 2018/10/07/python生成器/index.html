@@ -5,15 +5,19 @@
   
 
   
-  <title>佘泽健的博客</title>
+  <title>python生成器 | 佘泽健的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="佘泽健的博客">
-<meta property="og:url" content="https://Gakki1234.github.io/index.html">
+  <meta name="description" content=".本集概览1.生成器可以避免一次性生成整个列表2.生成器函数的运行过程解析及状态保存3.生成器表达式的使用方法4.生成器表达式的可迭代特性之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。今天这一集，就单聊生成器。1.避免一次性生">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python生成器">
+<meta property="og:url" content="https://Gakki1234.github.io/2018/10/07/python生成器/index.html">
 <meta property="og:site_name" content="佘泽健的博客">
+<meta property="og:description" content=".本集概览1.生成器可以避免一次性生成整个列表2.生成器函数的运行过程解析及状态保存3.生成器表达式的使用方法4.生成器表达式的可迭代特性之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。今天这一集，就单聊生成器。1.避免一次性生">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T04:45:19.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="佘泽健的博客">
+<meta name="twitter:title" content="python生成器">
+<meta name="twitter:description" content=".本集概览1.生成器可以避免一次性生成整个列表2.生成器函数的运行过程解析及状态保存3.生成器表达式的使用方法4.生成器表达式的可迭代特性之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。今天这一集，就单聊生成器。1.避免一次性生">
   
     <link rel="alternate" href="/atom.xml" title="佘泽健的博客" type="application/atom+xml">
   
@@ -64,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-python生成器" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-python生成器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/07/python生成器/" class="article-date">
   <time datetime="2018-10-07T04:41:08.000Z" itemprop="datePublished">2018-10-07</time>
@@ -79,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/python生成器/">python生成器</a>
+    <h1 class="article-title" itemprop="name">
+      python生成器
     </h1>
   
 
@@ -182,93 +184,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-python" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/07/python/" class="article-date">
-  <time datetime="2018-10-07T04:36:09.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/python/">Python参数传递</a>
-    </h1>
+    <a href="/2018/10/07/python/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python参数传递</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>参数传递<br>在 python 中，类型属于对象，变量是没有类型的：<br>a=[1,2,3]<br>a=”Runoob”<br>以上代码中，[1,2,3] 是 List 类型，”Runoob” 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用（一个指针），可以是指向 List 类型对象，也可以是指向 String 类型对象。<br>可更改(mutable)与不可更改(immutable)对象<br>在 python 中，strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。<br>• 不可变类型：变量赋值 a=5 后再赋值 a=10，这里实际是新生成一个 int 值对象 10，再让 a 指向它，而 5 被丢弃，不是改变a的值，相当于新生成了a。<br>• 可变类型：变量赋值 la=[1,2,3,4] 后再赋值 la[2]=5 则是将 list la 的第三个元素值更改，本身la没有动，只是其内部的一部分值被修改了。<br>python 函数的参数传递：<br>• 不可变类型：类似 c++ 的值传递，如 整数、字符串、元组。如fun（a），传递的只是a的值，没有影响a对象本身。比如在 fun（a）内部修改 a 的值，只是修改另一个复制的对象，不会影响 a 本身。<br>• 可变类型：类似 c++ 的引用传递，如 列表，字典。如 fun（la），则是将 la 真正的传过去，修改后fun外部的la也会受影响<br>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/python/" data-id="cjmydy3490001pw7yjgl3p5ly" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/07/hello-world/" class="article-date">
-  <time datetime="2018-10-07T02:22:11.540Z" itemprop="datePublished">2018-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/hello-world/" data-id="cjmydy33f0000pw7y2guqc5qf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
