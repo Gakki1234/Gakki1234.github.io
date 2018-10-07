@@ -1,87 +1,27 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+    
+
+    
+
+    
 
 
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="佘泽健的博客" type="application/atom+xml" />
-
-
-
-
-
-
-<meta name="description" content="一只爱学习的程序猿">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>佘泽健的博客 | Just to be better！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="一只爱学习的程序猿">
 <meta property="og:type" content="website">
 <meta property="og:title" content="佘泽健的博客">
 <meta property="og:url" content="https://github.com/Gakki1234/index.html">
@@ -91,1196 +31,522 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="佘泽健的博客">
 <meta name="twitter:description" content="一只爱学习的程序猿">
+    
+        <link rel="alternate" type="application/atom+xml" title="佘泽健的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://github.com/Gakki1234/"/>
-
-
-
-
-
-  <title>佘泽健的博客</title>
-  
-
-
-
-
-
-
-
+    <!-- custom head -->
+    
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body>
+    <div id="loading" class="active"></div>
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">佘泽健的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">SZJ</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
     </div>
-      
-        <p class="site-subtitle">Just to be better！</p>
-      
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">佘泽健的博客</div>
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/06-Pod控制器应用进阶/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/06-Pod控制器应用进阶/" itemprop="url">06:Pod控制器应用进阶</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T12:55:20+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
-          
-            <p>资源配置清单：<br>    自主式Pod资源</p>
-<pre><code>资源的清单格式：
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">佘泽健的博客</h1>
+        <h5 class="subtitle">
+            
+                Just to be better！
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-06-Pod控制器应用进阶"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 12:55:20" datetime="2018-10-07T04:55:20.000Z"  itemprop="datePublished">2018-10-07</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/06-Pod控制器应用进阶/">06:Pod控制器应用进阶</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        资源配置清单：    自主式Pod资源
+资源的清单格式：
     一级字段：apiVersion（group/version），kind，metadata（name，namespace，labels，annotations），spec（container），status（只读）
     Pod资源：
         spec.containers&lt;[]object&gt;
-        - name &lt;string&gt;
-           image &lt;string&gt;
-           imagePullPolicy &lt;string&gt;
-            Always，Never，IfNotPresent 
-        修改镜像中的默认应用：
-            command args  替换container里ENTRYPOINT和CMD
-        标签：
-            key=value
-                key：字母、数字、_、-、.
-                value：可以为空，只能以字母或数字开头及结尾
-        标签选择器：
-            等值关系：=，==，！=
-            集合关系：KEY in （VALUE1,VALUE2,…）
-                    KEY not in （VALUE1,VALUE2,…） 
-                    KEY
-                !KEY
+      ...
+    
 
-        许多资源支持内嵌字段定义其使用的标签选择器：
-            matchLabels：直接给定键值
-            matchExpressions：基于给定的表达式来定义使用的标签选择器，{key:&quot;KEY&quot;,operator:&quot;OPERATOR&quot;,values:[VAL1,VAL2,…]}
-                操作符：In,NotIn:values字段的值必须为非空列表；
-                        Exists,NotExists：values字段的值必须为空列表；
-    nodeSelector &lt;map[string]string&gt;
-        节点标签选择器，
-    nodeName &lt;string&gt;
-
-    annotations:资源注解
-        与label不同的地方在于，它不能用于挑选资源对象，仅用于为对象提供“元数据”。
-</code></pre><p>Pod的生命周期：</p>
-
-          
-        
-      
+        <a href="/2018/10/07/06-Pod控制器应用进阶/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
     </div>
     
+</article>
+
+        </li>
     
-    
+        <li class="post-list-item fade">
+            <article id="post-05-资源清单定义入门"
+  class="article-card article-type-post" itemprop="blogPost">
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/05-资源清单定义入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 12:54:52" datetime="2018-10-07T04:54:52.000Z"  itemprop="datePublished">2018-10-07</time>
 
         
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/05-资源清单定义入门/">05:资源清单定义入门</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        资源：对象    workload：Pod,ReplicaSet,Deployment,StatefulSet,DaemonSet,Job,Cronjob,……    服务发现及均衡：Service，Ingress，….    配置及存储：Volume，通过CSI扩展第三方存储卷        ComfigMap（当配置中心），Secret（保存敏感资源）        DownwardAP...
+    
+
+        <a href="/2018/10/07/05-资源清单定义入门/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-04-k8s应用入门"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 12:54:23" datetime="2018-10-07T04:54:23.000Z"  itemprop="datePublished">2018-10-07</time>
+
         
-          <h1 class="post-title" itemprop="name headline">
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/04-k8s应用入门/">04:k8s应用入门</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        kubectl versionkubectl cluster-infomaster：       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true       kubectl expose deployment  nginx-deploy –name=nginx –port...
+    
+
+        <a href="/2018/10/07/04-k8s应用入门/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-python生成器"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 12:41:08" datetime="2018-10-07T04:41:08.000Z"  itemprop="datePublished">2018-10-07</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/python生成器/">python生成器</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        .本集概览1.生成器可以避免一次性生成整个列表2.生成器函数的运行过程解析及状态保存3.生成器表达式的使用方法4.生成器表达式的可迭代特性之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。今天这一集，就单聊生成器。1.避免一...
+    
+
+        <a href="/2018/10/07/python生成器/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-python"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 12:36:09" datetime="2018-10-07T04:36:09.000Z"  itemprop="datePublished">2018-10-07</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/python/">Python参数传递</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        参数传递在 python 中，类型属于对象，变量是没有类型的：a=[1,2,3]a=”Runoob”以上代码中，[1,2,3] 是 List 类型，”Runoob” 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用（一个指针），可以是指向 List 类型对象，也可以是指向 String 类型对象。可更改(mutable)与不可更改(immutable)对象在 pytho...
+    
+
+        <a href="/2018/10/07/python/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-hello-world"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-07 10:22:11" datetime="2018-10-07T02:22:11.540Z"  itemprop="datePublished">2018-10-07</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/07/hello-world/">Hello World</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu...
+    
+
+        <a href="/2018/10/07/hello-world/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>SZJ &copy; 2015 - 2018</span>
+            <span>
                 
-                <a class="post-title-link" href="/2018/10/07/05-资源清单定义入门/" itemprop="url">05:资源清单定义入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T12:54:52+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>资源：对象<br>    workload：Pod,ReplicaSet,Deployment,StatefulSet,DaemonSet,Job,Cronjob,……<br>    服务发现及均衡：Service，Ingress，….<br>    配置及存储：Volume，通过CSI扩展第三方存储卷<br>        ComfigMap（当配置中心），Secret（保存敏感资源）<br>        DownwardAPI<br>    集群级资源：<br>        Namespace，Node，Role，ClusterRole，RoleBinding，ClusterRoleBinding<br>    元数据型资源：<br>        HPA，PodTemplate，LimitRange<br>    创建资源的方法：<br>        apiserver仅接收JSON格式的资源定义；<br>        yaml格式提供配置清单，apiserver可自动将其转为json格式，而后再提交；<br>    大部分资源的配置清单：五个一级字段<br>    kubectl explain pods.metadata (查看yaml格式如何定义)<br>        apiVersion：group/version<br>            $ kubectl api-versions<br>        kind：资源类别<br>        metadata：元数据，name，namespace，labels，annotations<br>        spec：期望的状态，disired state<br>        status：当天状态，current state，本字段由kubernetes集群维护；<br>        每个资源的引用PATH：<br>            /api/GROUP/VERSION/namespaces/NAMESPACE/TYPE/NAME<br>    配置清单创建资源：<br>        kubectl get pod pod_name -o yaml<br>        spec:资源对象的规格特性</p>
-<pre><code>例子：mkdir manifests
-cd manifests
-vim pod-demo.yaml
-
-/image/123.png
-kubectl create -f pod-demo.yaml
-kubectl logs pod-demo myapp
-kubectl exec -it pod-demo -c myapp  --  /bin/sh
-</code></pre><p>kubectl delete -f pod-demo.yaml</p>
-
-          
-        
-      
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
     </div>
-    
-    
-    
+</footer>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/04-k8s应用入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/04-k8s应用入门/" itemprop="url">04:k8s应用入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T12:54:23+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>kubectl version<br>kubectl cluster-info<br>master：<br>       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true<br>       kubectl expose deployment  nginx-deploy –name=nginx –port=80 –target-port=80 –protocol=TCP<br>       kubectl get services(svc)<br>       kubectl run client –image=busybox –replicas=1 -it  –restart=Never<br>       kubectl describe services nginx  查看service详细信息<br>       kubectl get pods –show-lables=true  查看pod标签<br>       kubectl edit svc nginx  (修改服务信息)<br>       kubectl run myapp –image=ikubernetes/myapp:v1 –replicas=2<br>       kubectl expose deployment myapp –name=myapp –port=80<br>       pod客户端：wget -O - -q myapp<br>       kubectl scale –replicas=5 deployment myapp 动态扩展或者缩减pod副本<br>     kubectl set image deployment myapp myapp=ikubernetes/myapp:v2<br>    kubectl rollout status deployment myapp<br>     kubectl rollout undo deployment myapp<br>     kubectl edit svc myapp   (ClusterIP 改成NodePort 集群外部可以访问)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/python生成器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/python生成器/" itemprop="url">python生成器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T12:41:08+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>.本集概览<br>1.生成器可以避免一次性生成整个列表<br>2.生成器函数的运行过程解析及状态保存<br>3.生成器表达式的使用方法<br>4.生成器表达式的可迭代特性<br>之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。<br>今天这一集，就单聊生成器。<br>1.避免一次性生成整个列表<br>避免一次性生成整个结果列表的本质是在需要的时候才逐次产生结果，而不是立即产生全部的结果，Python中有两种语言结构可以实现这种思路。<br>一个是生成器函数。外表去像是一个函数，但是没有用return语句一次性的返回整个结果对象列表，取而代之的是使用yield语句一次返回一个结果。<br>另一个是生成器表达式。类似于上一小节的列表解析，但是方括号换成了圆括号，他们返回按需产生的一个结果对象，而不是构建一个结果列表。<br>这个“按需”指的是在迭代的环境中，每次迭代按需产生一个对象，因此，上述二者都不会一次性构建整个列表，从而节约了内存空间。<br>2.生成器函数<br>下面具体结合例子说说生成器函数。<br>2.1.运行过程分析<br>首先，我们还没有详细介绍过函数，先简单说一下，常规函数接受输入的参数然后立即送回单个结果，之后这个函数调用就结束了。<br>但生成器函数却不同，他通过yield关键字返回一个值后，还能从其退出的地方继续运行，因此可以随时间产生一系列的值。他们自动实现了迭代协议，并且可以出现在迭代环境中。<br>运行的过程是这样的：生成器函数返回一个迭代器，for循环等迭代环境对这个迭代器不断调用next函数，不断的运行到下一个yield语句，逐一取得每一个返回值，直到没有yield语句可以运行，最终引发StopIteration异常。看，这个过程是不是很熟悉。<br>首先，下面这个例子证实了生成器函数返回的是一个迭代器<br>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line">   <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line">       <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line">G = gen_squares(<span class="number">5</span>)</span><br><span class="line">print(G)</span><br><span class="line">print(iter(G))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object gen_squares at <span class="number">0x0000000002402558</span>&gt;</span><br><span class="line">&lt;generator object gen_squares at <span class="number">0x0000000002402558</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>然后再用手动模拟循环的方式来看看生成器函数的运行过程，你会发现和前面介绍过的熟悉场景并无二致。<br>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line">   <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line">       <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line">G = gen_squares(<span class="number">3</span>)</span><br><span class="line">print(G)</span><br><span class="line">print(iter(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object gen_squares at <span class="number">0x00000000021C2558</span>&gt;</span><br><span class="line">&lt;generator object gen_squares at <span class="number">0x00000000021C2558</span>&gt;</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">File <span class="string">"E:/12homework/12homework.py"</span>, line <span class="number">10</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">print(next(G))</span><br><span class="line">StopIteration</span><br></pre></td></tr></table></figure></p>
-<p>那这么看，在for循环等真正的使用场景中使用也不难了 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line"><span class="number">2.</span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line"><span class="number">3.</span>        <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line"><span class="number">4.</span> <span class="keyword">for</span> i <span class="keyword">in</span> gen_squares(<span class="number">5</span>):</span><br><span class="line"><span class="number">5.</span>    print(i, end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">9</span> <span class="number">16</span></span><br><span class="line">``` </span><br><span class="line"><span class="number">2.2</span>.状态保存</span><br><span class="line">我们进一步来说说生成器函数里状态保存的话题。在每次循环的时候，生成器函数都会在<span class="keyword">yield</span>处产生一个值，并将其返回给调用者，即<span class="keyword">for</span>循环。然后在<span class="keyword">yield</span>处保存内部状态，并挂起中断退出。在下一轮迭代调用时，从<span class="keyword">yield</span>的地方继续执行，并且沿用上一轮的函数内部变量的状态，直到内部循环过程结束。</span><br><span class="line">关于这个问题，具体可以看看这个例子： </span><br><span class="line">代码片段：</span><br><span class="line">``` python</span><br><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line"><span class="number">2.</span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line"><span class="number">3.</span>        <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line"><span class="number">4.</span>        print(<span class="string">'x=&#123;&#125;'</span>.format(x))</span><br><span class="line"><span class="number">5.</span> <span class="keyword">for</span> i <span class="keyword">in</span> gen_squares(<span class="number">4</span>):</span><br><span class="line"><span class="number">6.</span>    print(<span class="string">'x ** 2=&#123;&#125;'</span>.format(i))</span><br><span class="line"><span class="number">7.</span>    print(<span class="string">'--------------'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> x ** <span class="number">2</span>=<span class="number">0</span></span><br><span class="line"><span class="number">2.</span> --------------</span><br><span class="line"><span class="number">3.</span> x=<span class="number">0</span></span><br><span class="line"><span class="number">4.</span> x ** <span class="number">2</span>=<span class="number">1</span></span><br><span class="line"><span class="number">5.</span> --------------</span><br><span class="line"><span class="number">6.</span> x=<span class="number">1</span></span><br><span class="line"><span class="number">7.</span> x ** <span class="number">2</span>=<span class="number">4</span></span><br><span class="line"><span class="number">8.</span> --------------</span><br><span class="line"><span class="number">9.</span> x=<span class="number">2</span></span><br><span class="line"><span class="number">10.</span> x ** <span class="number">2</span>=<span class="number">9</span></span><br><span class="line"><span class="number">11.</span> --------------</span><br><span class="line"><span class="number">12.</span> x=<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
-<p>我们不难发现，生成器函数计算出x的平方后就挂起退出了，但他仍然保存了此时x的值，而yield后的print语句会在for循环的下一轮迭代中首先调用，此时x的值即是上一轮退出时保存的值。<br>3.生成器表达式<br>再说说生成器表达式吧。<br>3.1.使用方法<br>列表解析式已经是一个不错的选择，从内存使用的角度而言，生成器更优，因为他不用一次性生成整个对象列表，这二者之间如何转化呢？<br>生成器表达式写法上很像列表解析式，但是外面的方括号换成了圆括号，结果大不同，简单的看看： 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print([x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)])</span><br><span class="line"><span class="number">2.</span> print((x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>]</span><br><span class="line"><span class="number">2.</span> &lt;generator object &lt;genexpr&gt; at <span class="number">0x0000000002212558</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方括号是熟悉的列表解析式，一次性返回整个列表，圆括号是生成器表达式，返回一个生成器对象，而不是一次性生成整个列表。<br>3.2.适用于迭代环境<br>同时他支持迭代协议，适用于所有的迭代环境，略举几个例子： 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">for</span> x <span class="keyword">in</span> (x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)):</span><br><span class="line"><span class="number">2.</span>    print(x, end=<span class="string">','</span>)</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,</span><br></pre></td></tr></table></figure></p>
-<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(sum(x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br><span class="line">``` </span><br><span class="line">运行结果：</span><br><span class="line">``` bash</span><br><span class="line"> <span class="number">30</span></span><br></pre></td></tr></table></figure></p>
-<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print(sorted((x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)), reverse=<span class="keyword">True</span>))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">16</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure></p>
-<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print(list(x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>]</span><br></pre></td></tr></table></figure></p>
-<p>3.3.集合解析式与生成器对象<br>集合解析式等效于将生成器对象传入到list、set、dict等函数中作为构造参数 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> set(f(x) <span class="keyword">for</span> x <span class="keyword">in</span> S <span class="keyword">if</span> P(x))</span><br><span class="line"><span class="number">2.</span> &#123;f(x) <span class="keyword">for</span> x <span class="keyword">in</span> S <span class="keyword">if</span> P(x)&#125;</span><br><span class="line"><span class="number">3.</span> &#123;key:val <span class="keyword">for</span> (key, val) <span class="keyword">in</span> zip(keys, vals)&#125;</span><br><span class="line"><span class="number">4.</span> dict(zip(keys, vals))</span><br><span class="line"><span class="number">5.</span> &#123;x:f(x) <span class="keyword">for</span> x <span class="keyword">in</span> items&#125;</span><br><span class="line">dict((x, f(x)) <span class="keyword">for</span> x <span class="keyword">in</span> items)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/python/" itemprop="url">Python参数传递</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T12:36:09+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>参数传递<br>在 python 中，类型属于对象，变量是没有类型的：<br>a=[1,2,3]<br>a=”Runoob”<br>以上代码中，[1,2,3] 是 List 类型，”Runoob” 是 String 类型，而变量 a 是没有类型，她仅仅是一个对象的引用（一个指针），可以是指向 List 类型对象，也可以是指向 String 类型对象。<br>可更改(mutable)与不可更改(immutable)对象<br>在 python 中，strings, tuples, 和 numbers 是不可更改的对象，而 list,dict 等则是可以修改的对象。<br>• 不可变类型：变量赋值 a=5 后再赋值 a=10，这里实际是新生成一个 int 值对象 10，再让 a 指向它，而 5 被丢弃，不是改变a的值，相当于新生成了a。<br>• 可变类型：变量赋值 la=[1,2,3,4] 后再赋值 la[2]=5 则是将 list la 的第三个元素值更改，本身la没有动，只是其内部的一部分值被修改了。<br>python 函数的参数传递：<br>• 不可变类型：类似 c++ 的值传递，如 整数、字符串、元组。如fun（a），传递的只是a的值，没有影响a对象本身。比如在 fun（a）内部修改 a 的值，只是修改另一个复制的对象，不会影响 a 本身。<br>• 可变类型：类似 c++ 的引用传递，如 列表，字典。如 fun（la），则是将 la 真正的传过去，修改后fun外部的la也会受影响<br>python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Gakki1234/2018/10/07/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SZJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="佘泽健的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-07T10:22:11+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">SZJ</p>
-              <p class="site-description motion-element" itemprop="description">一只爱学习的程序猿</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">SZJ</span>
 
-  
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/Gakki1234/&title=佘泽健的博客&pic=https://github.com/Gakki1234/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/Gakki1234/&title=佘泽健的博客&source=一只爱学习的程序猿" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Gakki1234/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=佘泽健的博客&url=https://github.com/Gakki1234/&via=https://github.com/Gakki1234" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/Gakki1234/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuUlEQVR42u3aQWrEMAwF0Ln/pVvoqqVk+r/tiBReVmEG7KcshCz59Yqfj6/n+/v7p13z8IOLi7vNTTb+vXT+S75+FDwuLu4gN09eaznnipUbcHFxn8ltq448eFxc3P/LTVJbW9Dg4uI+mdtu0JYyeWo7dlbDxcXd4K41TM++397fxcXFPTSVaNPQ+9S2NpL5sQ4uLu4INx+KtClprS0SpTlcXNwR7tqibfJqP0p0+MHFxb2Nm2yw1sJox6tRYLi4uDdzkwzX/p6H3QaGi4s7yW2vR+SD1bWe52XAuLi449ydjfOjSzLErfs3uLi4R7n7o5GdBiguLu4zuW3bIt84CbI+MuHi4o5w87Lm1EWKthjCxcWd564tukbP/72sbXBxcUe4ybFnP53lR6yoSMLFxb2Zm1+J2LmE0d4Rw8XFfQJ3v5QZapHg4uIOcu9oaqwdhAo7Li7ubdw2oeTXtpLt2xEsLi7uJDdJXm2qyse3+fAGFxd3nlv3Wct2ap5B//hMuLi4D+OubZM3ZIsSBxcX92HcxdIkDuNwIsPFxd3gnrpQtXPIiZIdLi7uCHenYdpepGiHOri4uOPcTwietHuR5I7jAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
-  <span class="post-meta-divider">|</span>
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
