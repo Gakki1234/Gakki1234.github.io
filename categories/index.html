@@ -5,19 +5,16 @@
   
 
   
-  <title>04:k8s应用入门 | 佘泽健的博客</title>
+  <title>佘泽健的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="kubectl versionkubectl cluster-infomaster：       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true       kubectl expose deployment  nginx-deploy –name=nginx –port=80">
-<meta property="og:type" content="article">
-<meta property="og:title" content="04:k8s应用入门">
-<meta property="og:url" content="https://Gakki1234.github.io/2018/10/07/04-k8s应用入门/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="佘泽健的博客">
+<meta property="og:url" content="https://Gakki1234.github.io/categories/index.html">
 <meta property="og:site_name" content="佘泽健的博客">
-<meta property="og:description" content="kubectl versionkubectl cluster-infomaster：       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true       kubectl expose deployment  nginx-deploy –name=nginx –port=80">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-07T05:01:44.795Z">
+<meta property="og:updated_time" content="2018-10-07T05:36:18.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="04:k8s应用入门">
-<meta name="twitter:description" content="kubectl versionkubectl cluster-infomaster：       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true       kubectl expose deployment  nginx-deploy –name=nginx –port=80">
+<meta name="twitter:title" content="佘泽健的博客">
   
     <link rel="alternate" href="/atom.xml" title="佘泽健的博客" type="application/atom+xml">
   
@@ -68,59 +65,29 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-04-k8s应用入门" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="categories-" class="article article-type-categories" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/07/04-k8s应用入门/" class="article-date">
-  <time datetime="2018-10-07T04:54:23.000Z" itemprop="datePublished">2018-10-07</time>
+    <a href="/categories/index.html" class="article-date">
+  <time datetime="2018-10-07T05:36:18.706Z" itemprop="datePublished">2018-10-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      04:k8s应用入门
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>kubectl version<br>kubectl cluster-info<br>master：<br>       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true<br>       kubectl expose deployment  nginx-deploy –name=nginx –port=80 –target-port=80 –protocol=TCP<br>       kubectl get services(svc)<br>       kubectl run client –image=busybox –replicas=1 -it  –restart=Never<br>       kubectl describe services nginx  查看service详细信息<br>       kubectl get pods –show-lables=true  查看pod标签<br>       kubectl edit svc nginx  (修改服务信息)<br>       kubectl run myapp –image=ikubernetes/myapp:v1 –replicas=2<br>       kubectl expose deployment myapp –name=myapp –port=80<br>       pod客户端：wget -O - -q myapp<br>       kubectl scale –replicas=5 deployment myapp 动态扩展或者缩减pod副本<br>     kubectl set image deployment myapp myapp=ikubernetes/myapp:v2<br>    kubectl rollout status deployment myapp<br>     kubectl rollout undo deployment myapp<br>     kubectl edit svc myapp   (ClusterIP 改成NodePort 集群外部可以访问)</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/04-k8s应用入门/" data-id="cjmyg1d6s0000xg7yi01ns3hb" class="article-share-link">Share</a>
+      <a data-url="https://Gakki1234.github.io/categories/index.html" data-id="cjmyg1d7d0001xg7yqi2ivrvg" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2018/10/07/05-资源清单定义入门/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          05:资源清单定义入门
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/10/07/python生成器/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">python生成器</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
