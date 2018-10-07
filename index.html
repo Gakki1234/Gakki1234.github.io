@@ -66,6 +66,159 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-06-Pod控制器应用进阶" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/07/06-Pod控制器应用进阶/" class="article-date">
+  <time datetime="2018-10-07T04:55:20.000Z" itemprop="datePublished">2018-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/07/06-Pod控制器应用进阶/">06:Pod控制器应用进阶</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>资源配置清单：<br>    自主式Pod资源</p>
+<pre><code>资源的清单格式：
+    一级字段：apiVersion（group/version），kind，metadata（name，namespace，labels，annotations），spec（container），status（只读）
+    Pod资源：
+        spec.containers&lt;[]object&gt;
+        - name &lt;string&gt;
+           image &lt;string&gt;
+           imagePullPolicy &lt;string&gt;
+            Always，Never，IfNotPresent 
+        修改镜像中的默认应用：
+            command args  替换container里ENTRYPOINT和CMD
+        标签：
+            key=value
+                key：字母、数字、_、-、.
+                value：可以为空，只能以字母或数字开头及结尾
+        标签选择器：
+            等值关系：=，==，！=
+            集合关系：KEY in （VALUE1,VALUE2,…）
+                    KEY not in （VALUE1,VALUE2,…） 
+                    KEY
+                !KEY
+
+        许多资源支持内嵌字段定义其使用的标签选择器：
+            matchLabels：直接给定键值
+            matchExpressions：基于给定的表达式来定义使用的标签选择器，{key:&quot;KEY&quot;,operator:&quot;OPERATOR&quot;,values:[VAL1,VAL2,…]}
+                操作符：In,NotIn:values字段的值必须为非空列表；
+                        Exists,NotExists：values字段的值必须为空列表；
+    nodeSelector &lt;map[string]string&gt;
+        节点标签选择器，
+    nodeName &lt;string&gt;
+
+    annotations:资源注解
+        与label不同的地方在于，它不能用于挑选资源对象，仅用于为对象提供“元数据”。
+</code></pre><p>Pod的生命周期：</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://Gakki1234.github.io/2018/10/07/06-Pod控制器应用进阶/" data-id="cjmyehrob0004hs7yrctpoyem" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-05-资源清单定义入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/07/05-资源清单定义入门/" class="article-date">
+  <time datetime="2018-10-07T04:54:52.000Z" itemprop="datePublished">2018-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/07/05-资源清单定义入门/">05:资源清单定义入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>资源：对象<br>    workload：Pod,ReplicaSet,Deployment,StatefulSet,DaemonSet,Job,Cronjob,……<br>    服务发现及均衡：Service，Ingress，….<br>    配置及存储：Volume，通过CSI扩展第三方存储卷<br>        ComfigMap（当配置中心），Secret（保存敏感资源）<br>        DownwardAPI<br>    集群级资源：<br>        Namespace，Node，Role，ClusterRole，RoleBinding，ClusterRoleBinding<br>    元数据型资源：<br>        HPA，PodTemplate，LimitRange<br>    创建资源的方法：<br>        apiserver仅接收JSON格式的资源定义；<br>        yaml格式提供配置清单，apiserver可自动将其转为json格式，而后再提交；<br>    大部分资源的配置清单：五个一级字段<br>    kubectl explain pods.metadata (查看yaml格式如何定义)<br>        apiVersion：group/version<br>            $ kubectl api-versions<br>        kind：资源类别<br>        metadata：元数据，name，namespace，labels，annotations<br>        spec：期望的状态，disired state<br>        status：当天状态，current state，本字段由kubernetes集群维护；<br>        每个资源的引用PATH：<br>            /api/GROUP/VERSION/namespaces/NAMESPACE/TYPE/NAME<br>    配置清单创建资源：<br>        kubectl get pod pod_name -o yaml<br>        spec:资源对象的规格特性</p>
+<pre><code>例子：mkdir manifests
+cd manifests
+vim pod-demo.yaml
+
+/image/123.png
+kubectl create -f pod-demo.yaml
+kubectl logs pod-demo myapp
+kubectl exec -it pod-demo -c myapp  --  /bin/sh
+</code></pre><p>kubectl delete -f pod-demo.yaml</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://Gakki1234.github.io/2018/10/07/05-资源清单定义入门/" data-id="cjmyehrnl0001hs7yfjdqlzgy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-04-k8s应用入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/07/04-k8s应用入门/" class="article-date">
+  <time datetime="2018-10-07T04:54:23.000Z" itemprop="datePublished">2018-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/07/04-k8s应用入门/">04:k8s应用入门</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>kubectl version<br>kubectl cluster-info<br>master：<br>       kubectl run nginx-deploy –image=nginx:1.14-alpine –port=80 –replicas=1 –dry-run=true<br>       kubectl expose deployment  nginx-deploy –name=nginx –port=80 –target-port=80 –protocol=TCP<br>       kubectl get services(svc)<br>       kubectl run client –image=busybox –replicas=1 -it  –restart=Never<br>       kubectl describe services nginx  查看service详细信息<br>       kubectl get pods –show-lables=true  查看pod标签<br>       kubectl edit svc nginx  (修改服务信息)<br>       kubectl run myapp –image=ikubernetes/myapp:v1 –replicas=2<br>       kubectl expose deployment myapp –name=myapp –port=80<br>       pod客户端：wget -O - -q myapp<br>       kubectl scale –replicas=5 deployment myapp 动态扩展或者缩减pod副本<br>     kubectl set image deployment myapp myapp=ikubernetes/myapp:v2<br>    kubectl rollout status deployment myapp<br>     kubectl rollout undo deployment myapp<br>     kubectl edit svc myapp   (ClusterIP 改成NodePort 集群外部可以访问)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://Gakki1234.github.io/2018/10/07/04-k8s应用入门/" data-id="cjmyehrmw0000hs7ynz4ss8k9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-python生成器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/07/python生成器/" class="article-date">
@@ -89,94 +242,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>.本集概览<br>1.生成器可以避免一次性生成整个列表<br>2.生成器函数的运行过程解析及状态保存<br>3.生成器表达式的使用方法<br>4.生成器表达式的可迭代特性<br>之前我们介绍了列表解析式，他的优点很多，比如运行速度快、编写简单，但是有一点我们不要忘了，他是一次性生成整个列表。如果整个列表非常大，这对内存也同样会造成很大压力，想要实现内存的节约，可以将列表解析式转换为生成器表达式。<br>今天这一集，就单聊生成器。<br>1.避免一次性生成整个列表<br>避免一次性生成整个结果列表的本质是在需要的时候才逐次产生结果，而不是立即产生全部的结果，Python中有两种语言结构可以实现这种思路。<br>一个是生成器函数。外表去像是一个函数，但是没有用return语句一次性的返回整个结果对象列表，取而代之的是使用yield语句一次返回一个结果。<br>另一个是生成器表达式。类似于上一小节的列表解析，但是方括号换成了圆括号，他们返回按需产生的一个结果对象，而不是构建一个结果列表。<br>这个“按需”指的是在迭代的环境中，每次迭代按需产生一个对象，因此，上述二者都不会一次性构建整个列表，从而节约了内存空间。<br>2.生成器函数<br>下面具体结合例子说说生成器函数。<br>2.1.运行过程分析<br>首先，我们还没有详细介绍过函数，先简单说一下，常规函数接受输入的参数然后立即送回单个结果，之后这个函数调用就结束了。<br>但生成器函数却不同，他通过yield关键字返回一个值后，还能从其退出的地方继续运行，因此可以随时间产生一系列的值。他们自动实现了迭代协议，并且可以出现在迭代环境中。<br>运行的过程是这样的：生成器函数返回一个迭代器，for循环等迭代环境对这个迭代器不断调用next函数，不断的运行到下一个yield语句，逐一取得每一个返回值，直到没有yield语句可以运行，最终引发StopIteration异常。看，这个过程是不是很熟悉。<br>首先，下面这个例子证实了生成器函数返回的是一个迭代器<br>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line">   <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line">       <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line">G = gen_squares(<span class="number">5</span>)</span><br><span class="line">print(G)</span><br><span class="line">print(iter(G))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object gen_squares at 0x0000000002402558&gt;</span><br><span class="line">&lt;generator object gen_squares at 0x0000000002402558&gt;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object gen_squares at <span class="number">0x0000000002402558</span>&gt;</span><br><span class="line">&lt;generator object gen_squares at <span class="number">0x0000000002402558</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <p>然后再用手动模拟循环的方式来看看生成器函数的运行过程，你会发现和前面介绍过的熟悉场景并无二致。<br>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line">   <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line">       <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line">G = gen_squares(<span class="number">3</span>)</span><br><span class="line">print(G)</span><br><span class="line">print(iter(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br><span class="line">print(next(G))</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：</p>
-<ol>
-<li><generator object="" gen_squares="" at="" 0x00000000021c2558=""></generator></li>
-<li><generator object="" gen_squares="" at="" 0x00000000021c2558=""></generator></li>
-<li>0</li>
-<li>1</li>
-<li>4</li>
-<li>Traceback (most recent call last):</li>
-<li>File “E:/12homework/12homework.py”, line 10, in <module></module></li>
-<li>print(next(G))</li>
-<li><p>StopIteration<br>那这么看，在for循环等真正的使用场景中使用也不难了 代码片段：</p>
-</li>
-<li><p>def gen_squares(num):</p>
-</li>
-<li>for x in range(num):</li>
-<li>yield x ** 2</li>
-<li>for i in gen_squares(5):</li>
-<li><p>print(i, end=’ ‘)<br>运行结果：</p>
-</li>
-<li><p>0 1 4 9 16<br>2.2.状态保存<br>我们进一步来说说生成器函数里状态保存的话题。在每次循环的时候，生成器函数都会在yield处产生一个值，并将其返回给调用者，即for循环。然后在yield处保存内部状态，并挂起中断退出。在下一轮迭代调用时，从yield的地方继续执行，并且沿用上一轮的函数内部变量的状态，直到内部循环过程结束。<br>关于这个问题，具体可以看看这个例子：<br>代码片段：</p>
-</li>
-<li><p>def gen_squares(num):</p>
-</li>
-<li>for x in range(num):</li>
-<li>yield x ** 2</li>
-<li>print(‘x={}’.format(x))</li>
-<li>for i in gen_squares(4):</li>
-<li>print(‘x ** 2={}’.format(i))</li>
-<li><p>print(‘————–’)<br>运行结果：</p>
-</li>
-<li><p>x ** 2=0</p>
-</li>
-<li><hr>
-</li>
-<li>x=0</li>
-<li>x ** 2=1</li>
-<li><hr>
-</li>
-<li>x=1</li>
-<li>x ** 2=4</li>
-<li><hr>
-</li>
-<li>x=2</li>
-<li>x ** 2=9</li>
-<li><hr>
-</li>
-<li><p>x=3<br>我们不难发现，生成器函数计算出x的平方后就挂起退出了，但他仍然保存了此时x的值，而yield后的print语句会在for循环的下一轮迭代中首先调用，此时x的值即是上一轮退出时保存的值。<br>3.生成器表达式<br>再说说生成器表达式吧。<br>3.1.使用方法<br>列表解析式已经是一个不错的选择，从内存使用的角度而言，生成器更优，因为他不用一次性生成整个对象列表，这二者之间如何转化呢？<br>生成器表达式写法上很像列表解析式，但是外面的方括号换成了圆括号，结果大不同，简单的看看： 代码片段：</p>
-</li>
-<li><p>print([x ** 2 for x in range(5)])</p>
-</li>
-<li><p>print((x ** 2 for x in range(5)))<br>运行结果：</p>
-</li>
-<li><p>[0, 1, 4, 9, 16]</p>
-</li>
-<li><p>&lt;generator object <genexpr> at 0x0000000002212558&gt;<br>方括号是熟悉的列表解析式，一次性返回整个列表，圆括号是生成器表达式，返回一个生成器对象，而不是一次性生成整个列表。<br>3.2.适用于迭代环境<br>同时他支持迭代协议，适用于所有的迭代环境，略举几个例子： 代码片段：</genexpr></p>
-</li>
-<li><p>for x in (x ** 2 for x in range(5)):</p>
-</li>
-<li><p>print(x, end=’,’)<br>运行结果：</p>
-</li>
-<li><p>0,1,4,9,16,<br>代码片段：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">print</span>(sum(x ** 2 <span class="keyword">for</span> x <span class="keyword">in</span> range(5)))</span><br><span class="line">``` </span><br><span class="line">运行结果：</span><br><span class="line">``` bash</span><br><span class="line">$ 30</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>代码片段：</p>
-<ol>
-<li><p>print(sorted((x ** 2 for x in range(5)), reverse=True))<br>运行结果：</p>
-</li>
-<li><p>[16, 9, 4, 1, 0]<br>代码片段：</p>
-</li>
-<li><p>print(list(x ** 2 for x in range(5)))<br>运行结果：</p>
-</li>
-<li><p>[0, 1, 4, 9, 16]<br>3.3.集合解析式与生成器对象<br>集合解析式等效于将生成器对象传入到list、set、dict等函数中作为构造参数 代码片段：</p>
-</li>
-<li><p>set(f(x) for x in S if P(x))</p>
-</li>
-<li>{f(x) for x in S if P(x)}</li>
-<li>{key:val for (key, val) in zip(keys, vals)}</li>
-<li>dict(zip(keys, vals))</li>
-<li>{x:f(x) for x in items}<br>dict((x, f(x)) for x in items)</li>
-</ol>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object gen_squares at <span class="number">0x00000000021C2558</span>&gt;</span><br><span class="line">&lt;generator object gen_squares at <span class="number">0x00000000021C2558</span>&gt;</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">File <span class="string">"E:/12homework/12homework.py"</span>, line <span class="number">10</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">print(next(G))</span><br><span class="line">StopIteration</span><br></pre></td></tr></table></figure></p>
+<p>那这么看，在for循环等真正的使用场景中使用也不难了 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line"><span class="number">2.</span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line"><span class="number">3.</span>        <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line"><span class="number">4.</span> <span class="keyword">for</span> i <span class="keyword">in</span> gen_squares(<span class="number">5</span>):</span><br><span class="line"><span class="number">5.</span>    print(i, end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">9</span> <span class="number">16</span></span><br><span class="line">``` </span><br><span class="line"><span class="number">2.2</span>.状态保存</span><br><span class="line">我们进一步来说说生成器函数里状态保存的话题。在每次循环的时候，生成器函数都会在<span class="keyword">yield</span>处产生一个值，并将其返回给调用者，即<span class="keyword">for</span>循环。然后在<span class="keyword">yield</span>处保存内部状态，并挂起中断退出。在下一轮迭代调用时，从<span class="keyword">yield</span>的地方继续执行，并且沿用上一轮的函数内部变量的状态，直到内部循环过程结束。</span><br><span class="line">关于这个问题，具体可以看看这个例子： </span><br><span class="line">代码片段：</span><br><span class="line">``` python</span><br><span class="line"><span class="number">1.</span> <span class="function"><span class="keyword">def</span> <span class="title">gen_squares</span><span class="params">(num)</span>:</span></span><br><span class="line"><span class="number">2.</span>    <span class="keyword">for</span> x <span class="keyword">in</span> range(num):</span><br><span class="line"><span class="number">3.</span>        <span class="keyword">yield</span> x ** <span class="number">2</span></span><br><span class="line"><span class="number">4.</span>        print(<span class="string">'x=&#123;&#125;'</span>.format(x))</span><br><span class="line"><span class="number">5.</span> <span class="keyword">for</span> i <span class="keyword">in</span> gen_squares(<span class="number">4</span>):</span><br><span class="line"><span class="number">6.</span>    print(<span class="string">'x ** 2=&#123;&#125;'</span>.format(i))</span><br><span class="line"><span class="number">7.</span>    print(<span class="string">'--------------'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> x ** <span class="number">2</span>=<span class="number">0</span></span><br><span class="line"><span class="number">2.</span> --------------</span><br><span class="line"><span class="number">3.</span> x=<span class="number">0</span></span><br><span class="line"><span class="number">4.</span> x ** <span class="number">2</span>=<span class="number">1</span></span><br><span class="line"><span class="number">5.</span> --------------</span><br><span class="line"><span class="number">6.</span> x=<span class="number">1</span></span><br><span class="line"><span class="number">7.</span> x ** <span class="number">2</span>=<span class="number">4</span></span><br><span class="line"><span class="number">8.</span> --------------</span><br><span class="line"><span class="number">9.</span> x=<span class="number">2</span></span><br><span class="line"><span class="number">10.</span> x ** <span class="number">2</span>=<span class="number">9</span></span><br><span class="line"><span class="number">11.</span> --------------</span><br><span class="line"><span class="number">12.</span> x=<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>我们不难发现，生成器函数计算出x的平方后就挂起退出了，但他仍然保存了此时x的值，而yield后的print语句会在for循环的下一轮迭代中首先调用，此时x的值即是上一轮退出时保存的值。<br>3.生成器表达式<br>再说说生成器表达式吧。<br>3.1.使用方法<br>列表解析式已经是一个不错的选择，从内存使用的角度而言，生成器更优，因为他不用一次性生成整个对象列表，这二者之间如何转化呢？<br>生成器表达式写法上很像列表解析式，但是外面的方括号换成了圆括号，结果大不同，简单的看看： 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print([x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)])</span><br><span class="line"><span class="number">2.</span> print((x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>]</span><br><span class="line"><span class="number">2.</span> &lt;generator object &lt;genexpr&gt; at <span class="number">0x0000000002212558</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>方括号是熟悉的列表解析式，一次性返回整个列表，圆括号是生成器表达式，返回一个生成器对象，而不是一次性生成整个列表。<br>3.2.适用于迭代环境<br>同时他支持迭代协议，适用于所有的迭代环境，略举几个例子： 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">for</span> x <span class="keyword">in</span> (x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)):</span><br><span class="line"><span class="number">2.</span>    print(x, end=<span class="string">','</span>)</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="number">0</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>,</span><br></pre></td></tr></table></figure></p>
+<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(sum(x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br><span class="line">``` </span><br><span class="line">运行结果：</span><br><span class="line">``` bash</span><br><span class="line"> <span class="number">30</span></span><br></pre></td></tr></table></figure></p>
+<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print(sorted((x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)), reverse=<span class="keyword">True</span>))</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">16</span>, <span class="number">9</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure></p>
+<p>代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> print(list(x ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)))</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>]</span><br></pre></td></tr></table></figure></p>
+<p>3.3.集合解析式与生成器对象<br>集合解析式等效于将生成器对象传入到list、set、dict等函数中作为构造参数 代码片段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> set(f(x) <span class="keyword">for</span> x <span class="keyword">in</span> S <span class="keyword">if</span> P(x))</span><br><span class="line"><span class="number">2.</span> &#123;f(x) <span class="keyword">for</span> x <span class="keyword">in</span> S <span class="keyword">if</span> P(x)&#125;</span><br><span class="line"><span class="number">3.</span> &#123;key:val <span class="keyword">for</span> (key, val) <span class="keyword">in</span> zip(keys, vals)&#125;</span><br><span class="line"><span class="number">4.</span> dict(zip(keys, vals))</span><br><span class="line"><span class="number">5.</span> &#123;x:f(x) <span class="keyword">for</span> x <span class="keyword">in</span> items&#125;</span><br><span class="line">dict((x, f(x)) <span class="keyword">for</span> x <span class="keyword">in</span> items)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/python生成器/" data-id="cjmydy34m0002pw7yjbxizojj" class="article-share-link">Share</a>
+      <a data-url="https://Gakki1234.github.io/2018/10/07/python生成器/" data-id="cjmyehroh0005hs7yxm1jpu35" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/python/" data-id="cjmydy3490001pw7yjgl3p5ly" class="article-share-link">Share</a>
+      <a data-url="https://Gakki1234.github.io/2018/10/07/python/" data-id="cjmyehro40003hs7yw0zqxz4v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,7 +344,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://Gakki1234.github.io/2018/10/07/hello-world/" data-id="cjmydy33f0000pw7y2guqc5qf" class="article-share-link">Share</a>
+      <a data-url="https://Gakki1234.github.io/2018/10/07/hello-world/" data-id="cjmyehrnw0002hs7ybh6o3kk5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -299,15 +385,23 @@
       <ul>
         
           <li>
+            <a href="/2018/10/07/06-Pod控制器应用进阶/">06:Pod控制器应用进阶</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/07/05-资源清单定义入门/">05:资源清单定义入门</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/07/04-k8s应用入门/">04:k8s应用入门</a>
+          </li>
+        
+          <li>
             <a href="/2018/10/07/python生成器/">python生成器</a>
           </li>
         
           <li>
             <a href="/2018/10/07/python/">Python参数传递</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/07/hello-world/">Hello World</a>
           </li>
         
       </ul>
