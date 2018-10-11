@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Gakki1234/"/>
-  <updated>2018-10-07T05:01:43.612Z</updated>
+  <updated>2018-10-11T14:59:16.745Z</updated>
   <id>https://github.com/Gakki1234/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python实现常见算法</title>
+    <link href="https://github.com/Gakki1234/2018/10/11/python%E5%AE%9E%E7%8E%B0%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95/"/>
+    <id>https://github.com/Gakki1234/2018/10/11/python实现常见算法/</id>
+    <published>2018-10-11T14:58:27.000Z</published>
+    <updated>2018-10-11T14:59:16.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h1&gt;&lt;h1 id=&quot;原理：列表中两个相邻的数，如果前一个数比后一个数大，就做交换。一共需要遍历列表的次数是len-lst-1&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>06:Pod控制器应用进阶</title>
